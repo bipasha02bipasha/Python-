@@ -1,0 +1,17 @@
+n=int(input("Enter the number of values you want to enter: "))
+a=[]
+for k in range(n):
+    val=int(input("Enter value:"))
+    a.append(val)
+    
+s=int(input("Enter the searching element: "))
+loc=0
+for i in range(n):
+    if(a[i]==s):
+        print(a[i])
+        loc=i;
+        break;
+if(loc):
+    print("Searching item found at position",loc+1)
+else:
+    print("Searching item not found")
