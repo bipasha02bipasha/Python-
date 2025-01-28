@@ -1,0 +1,19 @@
+def binarySearch(arr, ele, l, h):
+    while l <= h:
+        mid = l + (h - l)//2
+        if arr[mid] == ele:
+            return mid
+        elif arr[mid] < ele:
+            l = mid + 1
+        else:
+            h = mid - 1
+    return -1
+arr = [4, 6, 8, 10, 13, 14]
+print("The given array is: ", arr)
+ele = 13
+print("Element to be found is: ", ele)
+pos = binarySearch(arr, ele, 0, len(arr)-1)
+if pos != -1:
+    print("The Position of the element is: ", pos)
+else:
+    print("Element Not found")
