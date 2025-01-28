@@ -1,0 +1,14 @@
+def insertion_sort(arr, Len):
+    if Len <= 1:
+        return
+    insertion_sort(arr, Len - 1)
+    end = arr[Len - 1]
+    i = Len - 2
+    while(i>=0 and arr[i] > end):
+        arr[i+1] = arr[i]
+        i = i - 1
+    arr[i + 1] = end
+array = [9, 1, 7, 3, 5]
+print("The Original array is: ", array)
+insertion_sort(array, len(array))
+print("The Sorted array is :", array)
